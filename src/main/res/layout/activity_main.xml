@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+
+    android:orientation="vertical"
+    android:gravity="top|center"
+    android:background="@drawable/gradient"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    tools:ignore="ExtraText">
+
+    <TextView
+        style="@android:style/TextAppearance.Material.Headline"
+        android:layout_width="391dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/heading_bg"
+        android:elevation="5dp"
+        android:gravity="center"
+        android:padding="30dp"
+        android:paddingLeft="0.5mm"
+        android:paddingRight="0.5mm"
+        android:text="BMI CALCULATOR"
+        android:textStyle="bold" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="1dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:padding="10dp">
+
+        <RadioGroup
+            android:id="@+id/age_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/under_18"
+                android:layout_width="124dp"
+                android:layout_height="36dp"
+                android:text="Under 18"
+                android:textStyle="bold"/>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@android:color/darker_gray"/>
+
+            <RadioButton
+                android:id="@+id/age_18_50"
+                android:layout_width="150dp"
+                android:layout_height="38dp"
+                android:text="18 to 50 years"
+                android:textStyle="bold" />
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@android:color/darker_gray"/>
+
+            <RadioButton
+                android:id="@+id/over_50"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:text="Over 50"
+                android:textStyle="bold" />
+
+        </RadioGroup>
+
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="1dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="171dp"
+        android:gravity="center"
+        android:padding="10dp">
+
+        <TextView
+            style="@android:style/TextAppearance.Material.Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/light_gray_background"
+            android:elevation="5dp"
+            android:paddingRight="0.5mm"
+            android:paddingLeft="0.5mm"
+            android:textStyle="bold"
+            android:text="Height"
+
+            android:textSize="17sp" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray"/>
+
+        <NumberPicker
+            android:id="@+id/HeightPicker"
+            android:layout_width="wrap_content"
+            android:layout_height="141dp"
+            android:layout_marginHorizontal="5dp"
+            android:layout_marginLeft="10sp" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray"/>
+        <ToggleButton
+            android:id="@+id/toggle_height_units"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:textOff="cm"
+            android:textOn="ft/in"
+            android:textSize="10sp" />
+
+        <TextView
+            style="@android:style/TextAppearance.Material.Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/light_gray_background"
+            android:elevation="5dp"
+            android:paddingLeft="0.5mm"
+            android:textStyle="bold"
+            android:text="Weight"
+            android:textSize="17sp"
+            android:paddingRight="0.5mm"/>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray"/>
+
+        <NumberPicker
+            android:id="@+id/WeightPicker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dp"
+            android:layout_marginLeft="10sp" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray"/>
+        <ToggleButton
+            android:id="@+id/toggle_weight_units"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textOff="kg"
+            android:textOn="lbs" />
+
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="1dp"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/result"
+            style="@style/TextAppearance.AppCompat.Headline"
+            android:layout_width="401dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Your BMI is: "
+            android:background="@drawable/light_gray_background"
+            android:elevation="5dp"
+            android:paddingRight="0.5mm"
+            android:paddingLeft="0.5mm"
+            android:textStyle="bold"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="1dp"/>
+
+
+    <TextView
+        android:id="@+id/healthyornot"
+        style="@style/TextAppearance.AppCompat.Headline"
+        android:layout_width="match_parent"
+        android:layout_height="41dp"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="Considered as: "
+        android:textStyle="bold"
+        android:textSize="15sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="1dp"/>
+
+    <TextView
+        style="@style/TextAppearance.AppCompat.Headline"
+        android:layout_width="400dp"
+        android:layout_height="54dp"
+        android:background="@drawable/light_gray_background"
+        android:elevation="5dp"
+        android:gravity="center"
+        android:padding="10dp"
+        android:paddingLeft="0.5mm"
+        android:paddingRight="0.5mm"
+        android:text="CONSIDER THE STANDARD BMI CHART BELOW"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="1dp"/>
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="276dp"
+        android:shape="ring"
+        android:src="@drawable/chart"></ImageView>
+
+</LinearLayout>

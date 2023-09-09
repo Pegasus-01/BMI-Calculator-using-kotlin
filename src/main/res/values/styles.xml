@@ -1,0 +1,10 @@
+<!-- res/values/styles.xml -->
+
+<resources>
+
+    <style name="RoundedCorners">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+</resources>
